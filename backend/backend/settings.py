@@ -82,7 +82,10 @@ DATABASES = {
         'PORT': os.getenv('KN_DB_PORT'),
         'USER': os.getenv('KN_DB_USER'),
         'PASSWORD': os.getenv('KN_DB_PASSWORD'),
-    }
+    },
+    'test': {
+        'NAME': f'test_{os.getenv("KN_DB_NAME")}',
+    },
 }
 
 
@@ -126,3 +129,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
